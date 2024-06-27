@@ -43,9 +43,9 @@ Process states :
 10. I/O redirection-
 I/O Redirection is when you change the default input/output (which is the terminal) to another file. This file can be used to read input into a program or to capture the output of a program. This specification works for all commands - user defined as well as system commands defined in bash. Shell supports >, <, » (<  works with both > and »).
 Description-
-  1. ">"  : Outputs to the filename following “>”.
-  2. "<<" : Similar to “>” but appends instead of overwriting if the file already exists.
-  3. "< " : Reads input from the filename following “<”.
+   ">"  : Outputs to the filename following “>”.
+   "<<" : Similar to “>” but appends instead of overwriting if the file already exists.
+   "< " : Reads input from the filename following “<”.
 An error message “No such input file found!” should be displayed if the input file does not exist.
 The output file should be created (with permissions 0644) if it does not already exist in both > and ».
 In case the output file already exists, it should be overwritten in case of > and appended to in case of ».

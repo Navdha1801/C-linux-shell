@@ -19,13 +19,8 @@ Foreground process-Time taken by the foreground process and the name of the proc
 Background process-Any command invoked with “&” is treated as a background command.Shell will keep taking other user commands. Whenever a new background process is started, print the PID of the newly created background process on your shell also.Multiple background processes can also run.Whenever background process finishes, display message to user.It prints process name along with pid when background process ends. Also mentions if the process ended normally or abnormally.
 
 8. "proclore" is used to obtain information regarding a process. If an argument is missing, print the information of your shell.
-Information printed :
-  1.  pid
-  2.  Process Status (R/R+/S/S+/Z)
-  3.  Process group
-  4.  Virtual Memory
-  5.  Executable path of process
-  Process states :
+Information printed : pid,Process Status (R/R+/S/S+/Z),Process group,Virtual Memory,Executable path of process
+Process states :
 
    1.  R/R+ : Running
    2. S/S+ : Sleeping in an interruptible wait
@@ -47,9 +42,10 @@ Information printed :
 
 10. I/O redirection-
 I/O Redirection is when you change the default input/output (which is the terminal) to another file. This file can be used to read input into a program or to capture the output of a program. This specification works for all commands - user defined as well as system commands defined in bash. Shell supports >, <, » (<  works with both > and »).
-  1. > : Outputs to the filename following “>”.
-  2. >> : Similar to “>” but appends instead of overwriting if the file already exists.
-  3. < : Reads input from the filename following “<”.
+Description-
+  1. ">"  : Outputs to the filename following “>”.
+  2. "<<" : Similar to “>” but appends instead of overwriting if the file already exists.
+  3. "< " : Reads input from the filename following “<”.
 An error message “No such input file found!” should be displayed if the input file does not exist.
 The output file should be created (with permissions 0644) if it does not already exist in both > and ».
 In case the output file already exists, it should be overwritten in case of > and appended to in case of ».
